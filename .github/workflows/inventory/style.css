@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1581094794329-c6dbb6c8d0d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background: linear-gradient(135deg, rgba(158, 164, 228, 0.9), rgba(64, 188, 155, 0.9));
+    backdrop-filter: blur(10px);
+    width: 420px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-container.compact select {
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.form-container.compact .form-row {
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.form-container.compact .captcha-section {
+    margin: 12px 0;
+}
+
+.form-container.compact .captcha-section label {
+    margin-bottom: 5px;
+}
+
+.form-container.compact #captchaCanvas {
+    width: 100px;
+    height: 35px;
+}
+
+.form-container.compact button {
+    padding: 10px;
+    font-size: 13px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+.form-container.compact .login-bar {
+    margin-top: 12px;
+    padding: 8px;
+}
+
+.form-container.compact .login-bar p {
+    font-size: 12px;
+}
+
+.form-container.compact .message {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+label {
+    font-size: 13px;
+    color: #000000;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus, select:focus {
+    border-color: #4f46e5;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.captcha-section {
+    margin: 15px 0;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#captchaCanvas {
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+}
+
+.captcha-container input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(135deg, #18bc1b, #159c18);
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(24, 188, 27, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #159c18, #128015);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(24, 188, 27, 0.4);
+}
+
+.login-bar {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.login-bar p {
+    margin: 0;
+    font-size: 13px;
+    color: #000000;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.login-bar a {
+    color: #ff3300;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-bar a:hover {
+    text-decoration: underline;
+    color: #cc2900;
+}
+
+.message {
+    margin-top: 10px;
+    text-align: center;
+    color: #d00000;
+    font-weight: 500;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.success {
+    color: #059669;
+}
+
+/* Hardware store icon styling */
+.hardware-icon {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://images.unsplash.com/photo-1581094794329-c6dbb6c8d0d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .form-container.compact {
+        width: 100%;
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-container.compact .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Even more compact for very small screens */
+@media (max-width: 400px) {
+    .form-container.compact {
+        width: 100%;
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .hardware-icon {
+        font-size: 2em;
+    }
+}
+
+/* Hardware store themed enhancements */
+.form-container::before {
+    content: "🔧";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
